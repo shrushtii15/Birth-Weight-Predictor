@@ -50,7 +50,7 @@ def get_prediction():
         prediction = model.predict(baby_df)
         prediction = round(float(prediction),2)
 
-        return render_template("index.html",prediction = prediction)
+        return render_template("frontend.html",prediction = prediction)
     except Exception as e :
         print("Error in ?predict",e )
         return f"Error:{e}"
